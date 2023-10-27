@@ -5,26 +5,26 @@ import RenderTag from "./RenderTag";
 
 const RightSidebar = () => {
   const hotQuestions = [
-    { _id: 1, title: "How do I use express as a custom server in NextJS ?" },
-    { _id: 2, title: "Cascading Deletes in SQL Alchemy" },
-    { _id: 3, title: "How to perfectly center a div with tailwind css ?" },
+    { _id: "1", title: "How do I use express as a custom server in NextJS ?" },
+    { _id: "2", title: "Cascading Deletes in SQL Alchemy" },
+    { _id: "3", title: "How to perfectly center a div with tailwind css ?" },
     {
-      _id: 4,
+      _id: "4",
       title:
         "Best practice for data fetching in a Next.js application with Server-Side Rendering (SSR)?",
     },
     {
-      _id: 5,
+      _id: "5",
       title: "Redux Toolkit Not updating state as expected",
     },
   ];
 
   const popularTags = [
-    { _id: 1, name: "Javascript", totalQuestions: 5 },
-    { _id: 2, name: "React", totalQuestions: 2 },
-    { _id: 3, name: "NextJS", totalQuestions: 7 },
-    { _id: 4, name: "VUE", totalQuestions: 3 },
-    { _id: 5, name: "Redux", totalQuestions: 10 },
+    { _id: "1", name: "Javascript", totalQuestions: 5 },
+    { _id: "2", name: "React", totalQuestions: 2 },
+    { _id: "3", name: "NextJS", totalQuestions: 7 },
+    { _id: "4", name: "VUE", totalQuestions: 3 },
+    { _id: "5", name: "Redux", totalQuestions: 10 },
   ];
   return (
     <section className="background-light900_dark200 light-border custom-scrollbar sticky right-0 top-0 flex h-screen w-[350px] flex-col overflow-y-auto border-l p-6 pt-36 shadow-light-300 dark:shadow-none max-xl:hidden">
