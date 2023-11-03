@@ -6,11 +6,11 @@ import { getAllUsers } from "@/lib/actions/user.action";
 import Link from "next/link";
 
 const Community = async () => {
-  const result = await getAllUsers();
+  const result = await getAllUsers({});
   console.log(result);
   return (
     <>
-      <h1 className="h1-bold text-dark100_light900">All users</h1>
+      <h1 className="h1-bold text-dark100_light900">All Users</h1>
 
       <div className="mt-11 flex justify-between gap-5 max-sm:flex-col sm:items-center">
         <LocalSearchbar
@@ -20,6 +20,7 @@ const Community = async () => {
           placeholder="Search for amazing minds"
           otherClasses="flex-1"
         />
+
         <Filter
           filters={UserFilters}
           otherClasses="min-h-[56px] sm:min-w-[170px]"
@@ -31,8 +32,8 @@ const Community = async () => {
           result.users.map((user) => <UserCard key={user._id} user={user} />)
         ) : (
           <div className="paragraph-regular text-dark200_light800 mx-auto max-w-4xl text-center">
-            <p>No users yets</p>
-            <Link href="/sign-up" className="mt-2 font-bold text-blue-900">
+            <p>No users yet</p>
+            <Link href="/sign-up" className="mt-2 font-bold text-accent-blue">
               Join to be the first!
             </Link>
           </div>
