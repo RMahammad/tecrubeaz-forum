@@ -6,6 +6,12 @@ import { UserFilters } from "@/constants/filter";
 import { getAllUsers } from "@/lib/actions/user.action";
 import { SearchParamsProps } from "@/types";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Community | LearnJS Club",
+  description: "LearnJS Club is a community of 1,000,000+ developers. Join us.",
+};
 
 const Community = async ({ searchParams }: SearchParamsProps) => {
   const result = await getAllUsers({

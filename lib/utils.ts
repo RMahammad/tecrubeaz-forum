@@ -112,10 +112,15 @@ interface BadgeParam {
   criteria: {
     type: keyof typeof BADGE_CRITERIA;
     count: number;
-  };
+  }[];
 }
+
 export const assignBadges = (params: BadgeParam) => {
-  const badgeCounts: BadgeCounts = { GOLD: 0, SILVER: 0, BRONZE: 0 };
+  const badgeCounts: BadgeCounts = {
+    GOLD: 0,
+    SILVER: 0,
+    BRONZE: 0,
+  };
 
   const { criteria } = params;
 
