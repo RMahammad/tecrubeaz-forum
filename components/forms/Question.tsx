@@ -222,11 +222,11 @@ const Question = ({ type, questionDetails, mongoUserId }: Props) => {
                         <Badge
                           key={tag}
                           className="subtle-medium background-light800_dark300 text-dark400_light500 flex items-center justify-center gap-2 rounded-md border-none px-4 py-2 capitalize"
-                          onClick={() => {
+                          onClick={() =>
                             type !== "Edit"
                               ? handleTagRemove(tag, field)
-                              : () => {};
-                          }}
+                              : () => {}
+                          }
                         >
                           {tag}
                           {type !== "Edit" && (
